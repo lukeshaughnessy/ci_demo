@@ -1,4 +1,4 @@
-ROM debian:wheezy
+FROM debian:wheezy
 
 #install Oracle Java 8
 
@@ -12,8 +12,6 @@ RUN apt-get install -y oracle-java8-set-default
 
 RUN apt-get install -y vim
 
-# For debugging
-RUN apt-get install -y gdb strace
     
 # Set up my user
 RUN useradd lshaughnessy -u 1000 -s /bin/bash --no-create-home
